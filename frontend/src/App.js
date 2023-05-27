@@ -4,6 +4,11 @@ import { useEffect, useState } from 'react';
 import { useParkingspaces } from "./getData";
 import HomePageController from "./components/homepagecontroller";
 import { API_URL } from './api';
+import Navbar from "react-bootstrap/Navbar";
+import Nav from "react-bootstrap/Nav";
+import Container from "react-bootstrap/Container";
+import ChargeInfo from './components/chargeInfo';
+
 
 function getAPIData() {
   return axios.get(API_URL).then((response) => 
@@ -14,6 +19,8 @@ function getAPIData() {
 function App() {
   // const [parkingspaces, setParkingspaces] = useState([]);
   const [parkingspaces, setParkingspaces] = useParkingspaces();
+  const [isClicked, setIsClicked] = useState(false);
+
   useEffect(() => {
     let mounted = true;
     getAPIData().then((items) => {
@@ -22,15 +29,28 @@ function App() {
       }
     });
     return () => (mounted = false);
-  }); 
+  });
 
   return (
-    <div className="App" style={{ padding: "20px", width: "100hw", "height": "100vh" }}>
-      {/* <Parkingspace parkingspaces={parkingspaces} /> */}
-      <HomePageController
-        parkingspaces={parkingspaces}
-        setParkingspaces={setParkingspaces}
-      />
+    <div style={{ backgroundColor: "bisque" }}>
+      <Navbar bg="dark" variant="dark">
+        <Container>
+          <Navbar.Brand href="#home">TaKo Parking</Navbar.Brand>
+        </Container>
+      </Navbar>
+
+      <div className="App" style={{ padding: "0px" }}>
+        {/* <Parkingspace parkingspaces={parkingspaces} /> */}
+
+        {isClicked ? (
+          <HomePageController
+            parkingspaces={parkingspaces}
+            setParkingspaces={setParkingspaces}
+          />
+        ) : (
+          <ChargeInfo isClicked={isClicked} setIsClicked={setIsClicked} />
+        )}
+      </div>
     </div>
   );
 }

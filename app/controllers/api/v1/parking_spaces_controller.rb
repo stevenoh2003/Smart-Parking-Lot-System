@@ -38,6 +38,18 @@ class Api::V1::ParkingSpacesController < ApplicationController
     @parking_space.destroy
   end
 
+  def find_by_password
+    password = params[:password]
+    @parking_space = ParkingSpace.find_by(password: password)
+
+    if @parking_space
+      render json: { user: @parking_space.user }
+    else
+      render json: { error: "Parking space not found for the given password" }, status: :not_found
+    end
+  end
+
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_parking_space

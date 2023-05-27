@@ -6,6 +6,9 @@ import Parkinginfo from "./parkinginfo";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import ChargeInfo from "./chargeInfo";
+import Navbar from "react-bootstrap/Navbar";
+import Fee from "./fee";
 
 function HomePageController(props) {
   const [isLoading, setIsLoading] = useState(false);
@@ -58,7 +61,7 @@ function HomePageController(props) {
                     marginBottom: "20px",
                   }}
                 >
-                  Your spot is <Parkinginfo selectedID={currentID} />
+                  Your spot is {currentID}
                 </div>
               )}
               <FormLayout
@@ -70,6 +73,7 @@ function HomePageController(props) {
                 onParkingspaceUpdate={handleParkingspaceUpdate}
               />
             </Col>
+
             <Col md={9} xs={8}>
               <Map selectedID={currentID} parkingspaces={props.parkingspaces} />
             </Col>
