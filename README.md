@@ -5,5 +5,11 @@
 
 ```pip install -r requirements.txt```
 
+## Start server
 
-![alt text]./recent.jpg
+```rails server -b 0.0.0.0 -p 5500```
+
+
+## Start frontend
+
+```npm run start```
