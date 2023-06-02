@@ -165,6 +165,10 @@ def main():
         #close gate
         motorcontrol(0)
         
+        #clear LEDs after a while
+        time.sleep(5)
+        GPIO.cleanup()
+        
     leave(password, start)
     time.sleep(3)
     main()
