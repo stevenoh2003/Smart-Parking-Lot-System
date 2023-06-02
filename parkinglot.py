@@ -160,7 +160,7 @@ def main():
         #opening gate
         motorcontrol(90)
         #display parking slot on oled display
-        oledcontrol("slot: " + str(userid))
+        oledcontrol("lot: " + str(userid))
         time.sleep(3)
         #close gate
         motorcontrol(0)
