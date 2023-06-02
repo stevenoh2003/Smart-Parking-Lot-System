@@ -51,30 +51,30 @@ def charlieplex(val1, val2, val3, val4):
         GPIO.setup(18, GPIO.OUT)
         GPIO.output(18, False)
     #GPIO pin 23
-    if val1 == -1:
+    if val2 == -1:
         GPIO.setup(23, GPIO.IN)
-    elif val1 == 1:
+    elif val2 == 1:
         GPIO.setup(23, GPIO.OUT)
         GPIO.output(23, True)
-    elif val1 == 0:
+    elif val2 == 0:
         GPIO.setup(23, GPIO.OUT)
         GPIO.output(23, False)
     #GPIO pin 24
-    if val1 == -1:
+    if val3 == -1:
         GPIO.setup(24, GPIO.IN)
-    elif val1 == 1:
+    elif val3 == 1:
         GPIO.setup(24, GPIO.OUT)
         GPIO.output(24, True)
-    elif val1 == 0:
+    elif val3 == 0:
         GPIO.setup(24, GPIO.OUT)
         GPIO.output(24, False)
     #GPIO pin 8
-    if val1 == -1:
+    if val4 == -1:
         GPIO.setup(8, GPIO.IN)
-    elif val1 == 1:
+    elif val4 == 1:
         GPIO.setup(8, GPIO.OUT)
         GPIO.output(8, True)
-    elif val1 == 0:
+    elif val4 == 0:
         GPIO.setup(8, GPIO.OUT)
         GPIO.output(8, False)
 
@@ -138,23 +138,6 @@ def leave(password, start):
     #recursion for when password is wrong
     else:
         leave()
-    
-def test():
-    #a function to test each component
-    choice = input("choose device: ")
-    if choice == "m":
-        motorcontrol(90)
-        time.sleep(1)
-        motorcontrol(0)
-    elif choice == "o":
-        oledcontrol("test")
-    else:
-        lightup(1)
-        time.sleep(2)
-        lightup(4)
-        time.sleep(2)
-        lightup(8)
-        
         
 def main():
     #password hidden with asterisk and userdata is obtained with user password through API
