@@ -26,3 +26,7 @@ Move to the frontend directory
 ## Product
 
 <img style="width: 60%" src="/images/image1.jpg" title="Parking lot top view">
+
+<img style="width: 60%" src="/images/image2.jpg" title="Parking lot top view">
+<img style="width: 60%" src="/images/image4.jpg" title="Parking lot top view">
+
