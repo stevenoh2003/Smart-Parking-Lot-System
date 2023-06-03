@@ -10,6 +10,8 @@ Run rails server on local network at port 5500
 
 If you change the port number, make sure to update the port number in ```/frontend/api.js```
 
+Hardware components such as raspberry Pi should also be connected to the local network.
+
 
 ## Start frontend
 
@@ -17,3 +19,6 @@ Move to the frontend directory
 ```cd /frontend```
 
 ```npm run start```
+
+
+
