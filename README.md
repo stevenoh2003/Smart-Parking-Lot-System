@@ -25,4 +25,4 @@ Move to the frontend directory
 
 ## Product
 
-<img src="/images/image1.jpg" alt="Alt text" title="Optional title">
+<img style="width: 60%" src="/images/image1.jpg" title="Parking lot top view">
