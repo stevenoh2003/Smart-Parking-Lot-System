@@ -28,8 +28,11 @@ Move to the frontend directory
 
 ## Libraries for Hardware Control System
 ```pip install requests```
+
 ```pip intsall luma.oled```
+
 ```pip install serial```
+
 ```pip install maskpass```
 
 ## Product
