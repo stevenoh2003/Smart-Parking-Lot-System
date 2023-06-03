@@ -22,3 +22,7 @@ Move to the frontend directory
 
 
 
+
+## Product
+
+<img src="/images/image1.jpg" alt="Alt text" title="Optional title">
