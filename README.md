@@ -2,6 +2,7 @@
 
 ## Install required dependensies 
 ```npm install```
+
 ```pip install requirements.txt```
 
 
