@@ -22,6 +22,7 @@ Move to the frontend directory
 
 ## Hardware
 - Raspberry Pi 4B
+- Raspberry Pi Camera Module
 - Micro Servomotor SG-90
 - OLED Display SSD1306
 - 8 Red Mini LEDs
