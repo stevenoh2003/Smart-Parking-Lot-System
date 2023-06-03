@@ -6,11 +6,12 @@ import axios from "axios";
 import { API_URL } from "../api";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Popover from "react-bootstrap/Popover";
+import Button from "react-bootstrap/esm/Button";
 
-function Map({ selectedID, parkingspaces }) {
+function Map({ selectedID, parkingspaces, changeMapStatus }) {
   const [parkingSpaces, setParkingSpaces] = useState([]);
 
-  console.log(parkingspaces[1])
+  console.log(parkingspaces[1]);
 
   const getParkingSpaceUser = (index) => {
     if (parkingspaces && parkingspaces.length > 0) {
@@ -82,8 +83,6 @@ function Map({ selectedID, parkingspaces }) {
   const destinationID = selectedID;
   const parkingLotsPerRow = 4;
 
-  const spaceIds = ["5", "6", "7", "8"];
-
   return (
     <div>
       <div style={outerBoxStyles}>
@@ -104,6 +103,7 @@ function Map({ selectedID, parkingspaces }) {
                     key={index + 1}
                     id={(index + 1).toString()}
                     emptySpacesID={emptySpacesID}
+                    mapStatus={changeMapStatus}
                   />
                 </div>
               </OverlayTrigger>
@@ -129,6 +129,7 @@ function Map({ selectedID, parkingspaces }) {
                     key={index + parkingLotsPerRow + 1}
                     id={(index + parkingLotsPerRow + 1).toString()}
                     emptySpacesID={emptySpacesID}
+                    mapStatus={changeMapStatus}
                   />
                 </div>
               </OverlayTrigger>
@@ -139,6 +140,7 @@ function Map({ selectedID, parkingspaces }) {
             <div id="7" style={styles} />
             <div id="8" style={styles} /> */}
           </div>
+
           {destinationID !== 0 && ( // Check if destinationID is not 0
             <>
               <Xarrow

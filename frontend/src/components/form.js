@@ -9,6 +9,7 @@ import Form from "react-bootstrap/Form"
 
 function FormLayout(props) {
 
+
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -212,6 +213,7 @@ useEffect(() => {
             type="text"
             name="user"
             value={formData.user}
+            required={true}
             onChange={(event) =>
               setFormData({ ...formData, user: event.target.value })
             }
@@ -282,6 +284,8 @@ useEffect(() => {
         {/* <Button variant="primary" onClick={handleShow}>
           Launch demo modal
         </Button> */}
+
+        <br></br>
         <Modal show={show} onHide={handleClose}>
           <Modal.Header closeButton>
             <Modal.Title>Parking Information</Modal.Title>

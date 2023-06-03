@@ -9,18 +9,25 @@ import Col from "react-bootstrap/Col";
 import ChargeInfo from "./chargeInfo";
 import Navbar from "react-bootstrap/Navbar";
 import Fee from "./fee";
+import Button from "react-bootstrap/esm/Button";
 
 function HomePageController(props) {
   const [isLoading, setIsLoading] = useState(false);
   const [currentID, setCurrentID] = useState(0);
   const [currentTime, setCurrentTime] = useState();
+  const [mapStatus, setMapStatus] = useState(false);
+
+
+  const changeMapStatus = () => {
+    setMapStatus(!mapStatus);
+  };
 
   const handleParkingspaceUpdate = (updatedParkingSpaces) => {
     props.setParkingspaces(updatedParkingSpaces);
   };
 
   return (
-    <div>
+    <div style={{ margin: "20px" }}>
       {/* Include the loader CSS */}
       <style>
         {`
@@ -64,18 +71,25 @@ function HomePageController(props) {
                   Your spot is {currentID}
                 </div>
               )}
-              <FormLayout
-                setParkingspaces={props.setParkingspaces}
-                setIsLoading={setIsLoading}
-                setCurrentID={setCurrentID}
-                currentID={currentID}
-                parkingspaces={props.parkingspaces}
-                onParkingspaceUpdate={handleParkingspaceUpdate}
-              />
+              <div style={{ marginTop: "20%" }}>
+                <FormLayout
+                  setParkingspaces={props.setParkingspaces}
+                  setIsLoading={setIsLoading}
+                  setCurrentID={setCurrentID}
+                  currentID={currentID}
+                  parkingspaces={props.parkingspaces}
+                  onParkingspaceUpdate={handleParkingspaceUpdate}
+                />
+                <br>
+                </br>
+                Real time footage
+                <br></br>
+{                <Button onClick={changeMapStatus}> {mapStatus? "On": "OFF"}</Button>
+}              </div>
             </Col>
 
             <Col md={9} xs={8}>
-              <Map selectedID={currentID} parkingspaces={props.parkingspaces} />
+              <Map selectedID={currentID} parkingspaces={props.parkingspaces} changeMapStatus={mapStatus} />
             </Col>
           </Row>
         </Container>

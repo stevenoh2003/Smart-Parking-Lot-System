@@ -35,7 +35,7 @@ function App() {
     <div style={{ backgroundColor: "bisque" }}>
       <Navbar bg="dark" variant="dark">
         <Container>
-          <Navbar.Brand href="#home">TaKo Parking</Navbar.Brand>
+          <Navbar.Brand href="#home">TaCo Parking Solutions</Navbar.Brand>
         </Container>
       </Navbar>
 

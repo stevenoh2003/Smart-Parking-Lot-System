@@ -6,6 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { useParkingspaces } from "./getData";
+import Parkingspace from './components/parkingspace';
 
 
 function Admin(props) {
@@ -85,8 +86,19 @@ const handleDelete = (event) => {
     //     });
     // };
   return (
-    <div>
-      <Form.Group style={{ display: "flex", alignItems: "center" }}>
+    <div style={{ margin: "20px" }}>
+      <Parkingspace parkingspaces={parkingspaces} />
+      <br></br>
+
+      <h2>ID to delete</h2>
+      <Form.Group
+        style={{
+          display: "flex",
+          alignItems: "center",
+          margin: "20px",
+          width: "50%",
+        }}
+      >
         <Form.Label style={{ marginRight: "10px" }}>ID</Form.Label>
 
         <Form.Control
@@ -99,7 +111,11 @@ const handleDelete = (event) => {
       {/* <Button variant="primary" type="button" onClick={handleUpdate}>
         Update
       </Button> */}
-      <Button type="button" onClick={handleDelete}>
+      <Button
+        style={{ margin: "20px", width: "50%" }}
+        type="button"
+        onClick={handleDelete}
+      >
         Delete
       </Button>
     </div>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_05_17_143843) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_01_160129) do
   create_table "parking_spaces", force: :cascade do |t|
     t.string "user"
     t.integer "index"
@@ -20,6 +20,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_17_143843) do
     t.boolean "isBigCar"
     t.datetime "leave_time"
     t.integer "password"
+    t.boolean "isEmpty"
   end
 
 end

@@ -58,7 +58,7 @@ class Api::V1::ParkingSpacesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def parking_space_params
-      params.require(:parking_space).permit(:user, :index, :hasShade, :isBigCa, :password)
+      params.require(:parking_space).permit(:user, :index, :hasShade, :isBigCa, :password, :isEmpty)
     end
 
     def find_id

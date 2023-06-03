@@ -29,9 +29,19 @@ useEffect(() => {
     clearInterval(intervalId); // clean up interval on unmount
   };
 }, []);
+  var status = props.emptySpacesID.includes(Number(props.id));
 
-  const user = parkingspaces[Number(props.id) - 1]?.user ?? "";
-  const status = props.emptySpacesID.includes(Number(props.id));
+  if(props.mapStatus){
+      if (parkingspaces[props.id - 1]?.isEmpty === false) {
+        status = true;
+      } else {
+        status = false;
+      }
+
+  }
+
+
+
   const styles = {
     border: "2px solid blue",
     height: "120px",
