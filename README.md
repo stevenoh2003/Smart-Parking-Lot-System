@@ -29,4 +29,6 @@ Move to the frontend directory
 
 <img style="width: 60%" src="/images/image2.jpg" title="Parking lot top view">
 <img style="width: 60%" src="/images/image4.jpg" title="Parking lot top view">
+<img style="width: 60%" src="/images/parkinglotcircuitdiagram.jpg" title="Circuit Diagram">
+<img style="width: 60%" src="/images/IMG_7398.jpg" title="Circuit Picture">
 
