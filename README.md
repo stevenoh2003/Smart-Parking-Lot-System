@@ -30,15 +30,6 @@ Move to the frontend directory
 - OLED Display SSD1306
 - 8 Red Mini LEDs
 
-## Libraries for Hardware Control System
-```pip install requests```
-
-```pip intsall luma.oled```
-
-```pip install serial```
-
-```pip install maskpass```
-
 ## Product
 
 <img style="width: 60%" src="/images/image1.jpg" title="Parking lot top view">
