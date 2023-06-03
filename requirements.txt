@@ -1,0 +1,13 @@
+# Backend requirements
+rails
+sqlite3
+active_model_serializers
+rack-cors
+
+# Frontend requirements
+axios
+react
+react-dom
+react-scripts
+bootstrap
+react-bootstrap

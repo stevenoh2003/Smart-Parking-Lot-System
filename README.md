@@ -1,24 +1,24 @@
-# README
+# Smart parking lot system prototype
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Install required dependensies 
+```npm install```
 
-Things you may want to cover:
+## Start server
 
-* Ruby version
+Run rails server on local network at port 5500 
+```rails server -b 0.0.0.0 -p 5500```
 
-* System dependencies
+If you change the port number, make sure to update the port number in ```/frontend/api.js```
 
-* Configuration
+Hardware components such as raspberry Pi should also be connected to the local network.
 
-* Database creation
 
-* Database initialization
+## Start frontend
 
-* How to run the test suite
+Move to the frontend directory
+```cd /frontend```
 
-* Services (job queues, cache servers, search engines, etc.)
+```npm run start```
 
-* Deployment instructions
 
-* ...
+
