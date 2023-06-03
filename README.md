@@ -20,8 +20,17 @@ Move to the frontend directory
 
 ```npm run start```
 
+## Hardware
+- Raspberry Pi 4B
+- Micro Servomotor SG-90
+- OLED Display SSD1306
+- 8 Red Mini LEDs
 
-
+## Libraries for Hardware Control System
+```pip install requests```
+```pip intsall luma.oled```
+```pip install serial```
+```pip install maskpass```
 
 ## Product
 
