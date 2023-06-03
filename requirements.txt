@@ -3,6 +3,10 @@ rails
 sqlite3
 active_model_serializers
 rack-cors
+requests
+luma.oled
+serial
+maskpass
 
 # Frontend requirements
 axios
